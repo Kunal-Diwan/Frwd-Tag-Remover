@@ -1,0 +1,70 @@
+{
+  "name": "Frwd-Tag-Remover",
+  "description": "telegram forward tag remover bot to help you to remove tag from any forwarded post. Make your fork now!",
+  "keywords": [
+    "forward",
+    "tag",
+    "remover",
+    "tg_bot"
+  ],
+  "repository": "https://github.com/Kunal-Diwan/Frwd-Tag-Remover",
+  "logo": "https://telegra.ph/file/9473b26ed5594247778a8.jpg",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "1701601729"
+    },
+    "API_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": ""
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": ""
+    },
+    "CHANNEL_ID":{
+      "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
+      "value": "-100"
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
+      "value": "0"
+    },
+    "START_MESSAGE": {
+      "description": "Optional: start message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\n I am forward tag remover bot. I can help you to remove forward it takes from your any posts such as documents,medias,music,stickers and texts.\n\nClick on <b>How to use❓</b> button to know about my uses."
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Optional: Force Sub message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\n<b>You need to join in my Channel to use me\n\nKindly Please join Channel</b>"
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only Broadcast and check Stats",
+      "value": ""
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+
