@@ -74,7 +74,7 @@ async def start_command(client: Client, message: Message):
                     InlineKeyboardButton("🎙️ Support 🎙️", url = "https://t.me/DevelopedBotz")
                 ],
                 [
-                    InlineKeyboardButton("❓ How the use ❓", callback_data = "howtouse"),
+                    InlineKeyboardButton("❓ How the use ❓", callback_data = "howtouse")
             ]
         )
         await message.reply_text(
