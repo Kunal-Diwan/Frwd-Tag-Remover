@@ -22,7 +22,7 @@ async def help_answer(client, callback_query):
     chat_id = callback_query.from_user.id,
     message_id = callback_query.message.message_id
     msg = int(callback_query.data.split('+')[1])
-    await client.send_message(chat_id = message.chat.id,
+    await client.edit_message_text(chat_id = message.chat.id,
         text=tr.HELP_MSG[msg],    reply_markup=InlineKeyboardMarkup(map(msg))
     )
 
