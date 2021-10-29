@@ -75,6 +75,7 @@ async def start_command(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton("❓ How the use ❓", callback_data = "howtouse")
+                ]
             ]
         )
         await message.reply_text(
