@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 async def _help(client, message):
-    client.send_message(chat_id = message.chat.id,
+    await client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
         parse_mode="markdown",
         disable_notification = True,
