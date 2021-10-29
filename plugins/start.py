@@ -8,7 +8,7 @@ from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
 from bot import DevelopedBots
 from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID
-from helper_func import subscribed, encode, decode, get_messages
+from functions.helper_func import subscribed, encode, decode, get_messages
 from database.sql import add_user, query_msg, full_userbase
 
 
