@@ -58,16 +58,3 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
-
-class Messages():
-      HELP_MSG = [
-        ".",
-
-        "**Features 🧰**\n\n◆ <b>Works Only in channel</b> \n\n◆ Fastest Automatic Forward Remover \n\n◆ Forward a message/file/Text/media to the channel \n\n◆ Automatically Deletes The Forward Tag and Resends the Message",
-
-        "**Setup**\n\n<b>👉 First of all add me to your channel as admin with all permission .\n\n<b><u>⚠️ Note ⚠️</u> - Only Channel Creator can set me and i will leave the channel if i am not an admin in the channel. </b>",
-
-        "**Excellent**\n\n<u>All Setup Done</u> \n\n<i>Now, I will remove any type of forwarded post from that channel will and send it again without forward tag .</i>",
-
-        "**𝐑𝐞𝐩𝐨𝐫𝐭 𝐁𝐮𝐠𝐬 🔽**"
-      ]
