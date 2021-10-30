@@ -19,10 +19,10 @@ help_callback_filter = filters.create(lambda _, __, query: query.data.startswith
 
 @Client.on_callback_query(help_callback_filter)
 async def help_answer(client, callback_query):
-    chat_id = callback_query.from_user.id,
-    message_id = callback_query.message.message_id
     msg = int(callback_query.data.split('+')[1])
     Client.edit_message_text(
+    chat_id = callback_query.from_user.id, 
+    message_id = callback_query.message.message_id,
     text=tr.HELP_MSG[msg],
     disable_web_page_preview=True)
 
