@@ -22,7 +22,7 @@ async def help_answer(client, callback_query):
     msg = int(callback_query.data.split('+')[1])
     Client.edit_message_text(
     chat_id = callback_query.from_user.id, 
-    message_id = callback_query.message.message_id,
+    message_id = callback_query.message.message_id, message.text,
     text=tr.HELP_MSG[msg],
     disable_web_page_preview=True)
 
