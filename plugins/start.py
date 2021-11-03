@@ -163,7 +163,7 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
  
     elif data == "help":
         await query.message.edit_text(
-            text = f"<b>◆ Works Only in channel</b>\n◆ Fastest Automatic Forward Remover\n◆ Add me to Your channel with all Admin Rights\nForward a message/file/Text/media to the channel\n◆ Automatically Deletes The Forward Tag and Resends the Message",
+            text = f"<b>◆ Works Only in channel</b>\n◆ Fastest Automatic Forward Remover\n◆ Add me to Your channel with all Admin Rights\n◆ Forward a message/file/Text/media to the channel\n◆ Automatically Deletes The Forward Tag and Resends the Message",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
