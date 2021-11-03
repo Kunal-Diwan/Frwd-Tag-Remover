@@ -139,7 +139,7 @@ async def get_users(client: DevelopedBots, message: Message):
     await msg.edit(f"{len(users)} users are using this bot")
 
 @DevelopedBots.on_callback_query()
-async def cb_handler(client: Bot, query: CallbackQuery):
+async def cb_handler(client: DevelopedBots, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
