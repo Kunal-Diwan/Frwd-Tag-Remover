@@ -170,7 +170,8 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton('❓ About❓', callback_data='about'),
+                        InlineKeyboardButton('🔐 Close 🔐', callback_data='close')
                     ]
                 ]
             )
