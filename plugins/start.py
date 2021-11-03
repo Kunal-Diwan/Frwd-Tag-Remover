@@ -148,7 +148,8 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton('🛠️ Help 🛠️', callback_data='help'),
+                        InlineKeyboardButton('🔐 Close 🔐', callback_data='close')
                     ]
                 ]
             )
@@ -161,7 +162,7 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
             pass
 
 @DevelopedBots.on_callback_query()
-async def help_handler(client: DevelopedBots, query: CallbackQuery):
+async def cbh_handler(client: DevelopedBots, query: CallbackQuery):
     data = query.data
     if data == "help":
         await query.message.edit_text(
