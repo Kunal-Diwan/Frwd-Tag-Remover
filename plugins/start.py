@@ -161,7 +161,7 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
             pass
 
 @DevelopedBots.on_callback_query()
-async def cb_handler(client: DevelopedBots, query: CallbackQuery):
+async def help_handler(client: DevelopedBots, query: CallbackQuery):
     data = query.data
     if data == "help":
         await query.message.edit_text(
