@@ -174,7 +174,7 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            <b>◆ Works Only in channel</b>\n◆ Fastest Automatic Forward Remover\n◆ Add me to Your channel with all Admin Rights\nForward a message/file/Text/media to the channel\n◆ Automatically Deletes The Forward Tag and Resends the Message",
+            "<b>◆ Works Only in channel</b>\n◆ Fastest Automatic Forward Remover\n◆ Add me to Your channel with all Admin Rights\nForward a message/file/Text/media to the channel\n◆ Automatically Deletes The Forward Tag and Resends the Message",
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
