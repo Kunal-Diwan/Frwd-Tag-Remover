@@ -159,3 +159,23 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
             await query.message.reply_to_message.delete()
         except:
             pass
+
+@Client.on_callback_query(filters.regex(r"^(help)$"))
+async def callback_data(bot, update: CallbackQuery):
+
+    query_data = update.data
+
+    if query_data == "help":
+        buttons = [[
+            InlineKeyboardButton('❓ About❓', callback_data='about'),
+            InlineKeyboardButton('🔐 Close 🔐', callback_data='close')
+        ]]
+    
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            text = f"<b>◆ Works Only in channel</b>\n◆ Fastest Automatic Forward Remover\n◆ Add me to Your channel with all Admin Rights\nForward a message/file/Text/media to the channel\n◆ Automatically Deletes The Forward Tag and Resends the Message",
+            reply_markup=reply_markup,
+            parse_mode="html",
+            disable_web_page_preview=True
+        )
