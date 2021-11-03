@@ -160,11 +160,8 @@ async def cb_handler(client: DevelopedBots, query: CallbackQuery):
             await query.message.reply_to_message.delete()
         except:
             pass
-
-@DevelopedBots.on_callback_query()
-async def cbh_handler(client: DevelopedBots, query: CallbackQuery):
-    data = query.data
-    if data == "help":
+ 
+    elif data == "help":
         await query.message.edit_text(
             text = f"<b>◆ Works Only in channel</b>\n◆ Fastest Automatic Forward Remover\n◆ Add me to Your channel with all Admin Rights\nForward a message/file/Text/media to the channel\n◆ Automatically Deletes The Forward Tag and Resends the Message",
             disable_web_page_preview = True,
